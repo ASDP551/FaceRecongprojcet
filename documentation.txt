@@ -1,0 +1,32 @@
+Introduction
+This face recognition system is built using data science techniques. It uses convolutional neural networks (CNN) for training a deep learning model on labeled face datasets. The system utilizes libraries like OpenCV and TensorFlow for image processing and model training.
+
+System Architecture
+The system consists of the following main components:
+
+Data Collection and Preprocessing:
+
+Detect and crop faces using OpenCV.
+Normalize, resize, and augment the images.
+Model Training:
+Use a pretrained CNN model (VGG16) with custom layers for face recognition.
+Model Evaluation:
+
+Evaluate the model using metrics such as accuracy, precision, recall, and F1-score.
+Data Collection and Preprocessing
+Data Collection
+Sources: Public datasets (e.g., LFW, CelebA, VGGFace) or custom dataset.
+Tools: OpenCV for face detection.
+Data Preprocessing
+Face Detection: Using OpenCV’s Haar cascades to detect and crop faces.
+Normalization: Scale pixel values to [0, 1] or [-1, 1].
+Resizing: Resize images to a uniform size (224x224).
+Data Augmentation: Use techniques like rotation, scaling, and flipping to enhance dataset diversity.
+
+Model Selection
+Base Model: VGG16 pretrained on ImageNet.
+Custom Layers: Additional dense and dropout layers for fine-tuning.
+Transfer Learning
+Freeze the initial layers of the VGG16 model.
+Train only the custom layers to adapt to the new dataset.
+
